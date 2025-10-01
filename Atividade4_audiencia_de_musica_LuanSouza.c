@@ -33,36 +33,39 @@ void bubbleSortDecrescente(int vetor[], int tamanho){
 // Procedimento para imprimir os valores vetor
 void imprimeVetor(int vetor[], int tamanho){
     for (int i = 0; i < tamanho; i++){// Laço de repetição para percorrer o array
-        printf("%d ", vetor[i]); // imprime o valor de cada posição do vetor
+        printf("Musica %d - %d\n", i + 1, vetor[i]); // imprime o valor de cada posição do vetor
     }
 }
 
 int main(void) {
+    
+    int musica[10]; // declaração do vetor
+    
+    printf("Insira a quantidade de reproduções de cada música.\n");
 
-    int vetor[] = {6, 2, 7, 9, 1, 4, 3, 5, 0, 8}; // declaração do vetor
+    for (int i = 0; i < 10; i++){
+        printf("\nMúsica %d: ", i + 1);
+        scanf("%d", &musica[i]);
+    }
 
-    int tam = sizeof(vetor) / sizeof(vetor[0]); // declaração de variável recebendo o tamanho do vetor
 
-    printf("Vetor Original: ");
-
-    // imprime vetor original
-    imprimeVetor(vetor, tam);
+    int tam = sizeof(musica) / sizeof(musica[0]); // declaração de variável recebendo o tamanho do vetor
 
     // ordena o vetor de modo crescente
-    bubbleSortCrescente(vetor, tam);
+    bubbleSortCrescente(musica, tam);
 
-    printf("\n\nOrdenação crescente: ");
+    printf("\n\nOrdem crescente das reproduções: ");
 
     // imprime o vetor com ordenação crescente
-    imprimeVetor(vetor, tam);
+    imprimeVetor(musica, tam);
 
     // ordena o vetor de modo decrescente
-    bubbleSortDecrescente(vetor, tam);
+    bubbleSortDecrescente(musica, tam);
 
-    printf("\n\nOrdenação decrescente: ");
+    printf("\n\nOrdem decrescente das reproduções: ");
 
     // imprime o vetor com ordenação crescente
-    imprimeVetor(vetor, tam);
+    imprimeVetor(musica, tam);
 
     printf("\n\n");
 
